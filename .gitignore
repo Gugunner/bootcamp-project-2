@@ -1,0 +1,12 @@
+
+App/Icon
+
+App/Icon
+
+*.pyc
+
+App/services/__pycache__/
+
+App/Icon
+
+*Icon
