@@ -1,5 +1,7 @@
-const path = 'http://localhost:5000/project-2-api/computing_efficiency.json';
-const path2 = 'http://localhost:5000/project-2-api/microprocessor_clock_speed.json';
+const computingPath = 'http://localhost:5000/project-2-api/computing_efficiency.json';
+const microprocessorsPath = 'http://localhost:5000/project-2-api/microprocessor_clock_speed.json';
+const priceChangesPath = 'http://localhost:5000/project-2-api/price_changes_in_consumer_goods_and_services_in_the_usa_1997_2017.json';
+
 // const data = {
 //     headers: {
 //         'Accept': 'application/json',
@@ -31,8 +33,8 @@ const path2 = 'http://localhost:5000/project-2-api/microprocessor_clock_speed.js
 //     console.log("D3 Data",jsonResponse);
 // });
 
-d3.json(path).then(data => {
-    console.log("D3 Data",data);
+d3.json(computingPath).then(data => {
+    console.log("Computing data",data);
     const list = d3.select("#listed");
 
     list
@@ -43,6 +45,12 @@ d3.json(path).then(data => {
         .text(v => v.entity);
 });
 
-d3.json(path2).then(data => {
-    console.log("Data 2", data);
+d3.json(microprocessorsPath).then(data => {
+    console.log("Microprocessors data", data);
 });
+
+d3.json(priceChangesPath).then(data => {
+    console.log("Price changes data", data);
+});
+
+
