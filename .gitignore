@@ -12,3 +12,5 @@ App/Icon
 *Icon
 
 App/Server/__pycache__/
+
+Server/config.py
