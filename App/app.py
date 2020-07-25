@@ -8,6 +8,7 @@ import config
 
 conn = f"mongodb+srv://{config.user}:{config.password}@cluster0.uatil.mongodb.net/Project_2?retryWrites=true&w=majority"
 client = pymongo.MongoClient(conn)
+
 db = client.Project_2
 collection_computing = db.computing_efficiency
 collection_microprocessors = db.microprocessor_clock_speed
@@ -15,6 +16,10 @@ collection_price_changes = db.price_changes_in_consumer_goods_and_services_in_th
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def main():
+    return render_template("index.html")
+
 @app.route('/project-2-api/computing_efficiency.json', methods=['GET'])
 def get_computing():
     mongo_values = collection_computing.find()

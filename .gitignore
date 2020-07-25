@@ -5,10 +5,15 @@ App/Icon
 
 *.pyc
 
-App/Server/services/__pycache__/
+App/services/__pycache__/
 
 App/Icon
 
 *Icon
 
 App/Server/__pycache__/
+
+Server/config.py
+App/__pycache__/Icon
+
+App/__pycache__/
