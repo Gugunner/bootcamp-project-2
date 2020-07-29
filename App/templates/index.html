@@ -1,17 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2</title>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <h1>Entities</h1>
-    <ul id="listed">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <title>Technological Progress</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="img/apple-touch-icon.png">
+        <title>Project 2</title>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    </ul>
-    <script src="../static/js/app.js"></script>
-</body>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="info">
+                <a href="https://ourworldindata.org/coronavirus">Coronavirus pandemic: daily updated research and data.</a>
+
+            </div>
+
+        </header>
+        <main>
+
+            <section class="hero1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>
+                                Technological Progress
+                            </h1>
+                            <p>
+                                by The Dream Team
+                            </p>
+                            <!-- <ul>
+                                <li><a href="https://ourworldindata.org/technological-progress#licence
+                                                                                                                                                                                                                                                                                ">Reuse our work freely</a></li>
+                                <li><a href="https://ourworldindata.org/technological-progress#citation">Cite this research</a></li>
+                            </ul> -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="data">
+                <div class="cuadro">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                All our charts on Technological Progress
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 ">
+                                                    <ul>
+                                                        <li id="primerLink">Computing efficiency</li>
+
+                                                        <li id="microLink">
+                                                            Microprocessor clock speed</li>
+
+                                                        <li id="nonCommercialLink">
+                                                            Non-commercial flight distance records</li>
+                                                        <li id="numberHumanLink">
+                                                            Number of human genome base pairs sequenced per US$</li>
+                                                        <li id="priceLink">
+                                                            Price changes in consumer goods and services in the USA</li>
+                                                        <li id="supercomputerLink">
+                                                            Supercomputer Power (FLOPS)</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 ">
+                                                    <div id="plot"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <div id="plot2"></div>
+                                                <div id="plot3"></div>
+                                                <div id="plot4"></div>
+                                                <div id="plot5"></div>
+                                                <div id="plot6"></div>
+                                                <div id="plot7"></div> -->
+
+
+            <section class="hero mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>
+                                Computing efficiency
+                            </h1>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Exponential increase in computing efficiency</h3>
+                            <hr>
+                            <p>The cost to keep the machine running also matters. Electrical efficiency measures the computational capacity per unit of energy, and it is also important with respect to the environmental impact that energy production has.
+                                                                
+                                                                                                The progress in this respect has been tremendous: researchers found that over the last six decades the energy demand for a fixed computational load halved every 18 months.7
+                                                                                                
+                                                                                                In this chart we see the computing efficiency of various processors over time. Here, computing efficiency is measured as the number of watts (a measure of electrical power) needed to carry out a million instructions per second (Watts per MIPS).</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div id="plot2"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="hero mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>
+                                Exponential progress – Moore’s Law
+                            </h1>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Microprocessors</h3>
+                            <hr>
+                            <p>In this chart we see microprocessor clock speed, measured as the number of pulses per second generated by an oscillator that sets the tempo for the processor. It is measured in hertz (pulses per second).</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <h4 class="tituloGrafico">Microprocessors</h4>
+                            
+                            <p>In this chart we see microprocessor clock speed, measured as the number of pulses per second generated by an oscillator that sets the tempo for the processor. It is measured in hertz (pulses per second).</p>
+                            <div id="plot3"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Computational power: operations per second</h3>
+                            <hr>
+                            <p>More importantly for us is that the power and speed of computers increased exponentially; the doubling time of computational capacity for personal computers was 1.5 years between 1975 to 2009. The increasing power of a wider range of computers – starting with the first general purpose computer (ENIAC) in 1946 – is shown in the black and white chart.
+
+                                We also show this series in interactive form, updated to the year 2017. Here the growth of supercomputer power is measured in terms of the number of floating-point operations carried out per second (FLOPS) by the largest supercomputer in any given year. (FLOPS) is a measure of calculations per second forfloating-point operations. Floating-point operations are needed for very large or very small real numbers, or computationsthat require a large dynamic range. It is therefore a more accurate measured than simply instructions per second.</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <h4 class="tituloGrafico">Supercomputer Power (FLOPS), 1993 to 2017</h4>
+                            
+                            <p>The growth of supercomputer power, measured as the number of floating-point operations carried out
+                                per second (FLOPS) by the largest supercomputer in any given year. (FLOPS) is a measure of
+                                calculations per second for floating-point operations. Floating-point operations are needed for very
+                                large or very small real numbers, or computations that require a large dynamic range. It is therefore a
+                                more accurate measured than simply instructions per second.</p>
+                            <div id="plot75"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            
+
+            <section class="hero mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>
+                                The non-linearity of technological change
+                            </h1>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Progress in human flight</h3>
+                            <hr>
+                            <p>This chart shows the global distance record set by non-commercial flights since 1800. This record represents the maximum distance a non-commercial powered aircraft has traveled without refueling. We see that prior to 1900, humans had not yet developed the technology necessary to enable powered flight. It wasn’t until 1903 that the Wright Brothers were able to engineer the first powered flying technology. This initial innovation sparked continued, rapid progress in modern aviation, with the record distance increasing nearly 150,000-fold from 0.28 kilometres in 1903 to just under 41,500 kilometres in 2006.
+                                                                
+                                                                                                This provides one examples of non-linear evolution of technological change: a single enabler shifted us from a civilization unable to fly, to one which could. Progress in aviation – and space exploration – has been rapid since.</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <h4 class="tituloGrafico">Non-commercial flight distance records, 1800 to 2006</h4>
+                            
+                            <p>Flight distance records for non-commercial flights since 1800, measured in kilometres traveled
+                                                                                            per journey. These records are restricted to journeys undertaken without any mid-air refueling.</p>
+                            <div id="plot4"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Progress in human genome DNA sequencing</h3>
+                            <hr>
+                            <p>Another example which demonstrates this non-linear progress is the field of human genome DNA sequencing.5 The Human Genome Project (HGP),which aimed to determine and map the complete set of nucleotide base pairs which make up human DNA (which total more than three billion) ran over 13 years from 1990-2003. This initial discovery and determination of the human genome sequence was a crucial injection point in the field of DNA sequencing.
+                                                                
+                                                                                                As reported by the NHGRI Genome Sequencing Program (GSP), the cost of sequencing DNA bases has fallen dramatically (more than 175,000-fold) since the completion of the first sequencing project. Note that this costing refers to the price of raw base pairs of DNA sequence; the cost of producing the full human genome is higher than the sum of 30 million base pairs would suggest. This is because some redundant sequence coverage would be necessary to achieve and assemble the full genome. Nonetheless, this rapid decline in cost is also observed in prices for the sequencing of a complete human genome.
+                                                                                                
+                                                                                                This can also be observed in another way: in this chart we have plotted the number of human genome base pairs which can be sequenced for one US$. In the early 2000s, we could sequence in the order of hundreds of base pairs per US$. Since 2008, we have seen a dramatic decline in the cost of sequencing, allowing us to now produce more than 33 million base pairs per US$.</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <h4 class="tituloGrafico">Number of human genome base pairs sequenced per US$,
+                                                                                                2001 to 2015</h4>
+                            
+                            <p>The number of human genome DNA base pairs which can be sequenced for one US$.</p>
+                            <div id="plot5"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="hero mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>
+                                The non-linearity of technological change
+                            </h1>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="articleComputing mt-5 pr-5 pl-5">
+                <div class="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3>Prices of consumer durables</h3>
+                            <hr>
+                            <h5>Decreasing prices of consumer durables: technological innovation and economies of scale</h5>
+                            <hr>
+                            <p>In the chart shown we see the price changes in goods and services in the United States from 1997-2017, measured as the percentage price change since 1997. Positive values indicate an increase in prices since 1997, and negative values represent a price decline. Here we see a distinct divide between consumer durables and technologies (which have typically seen a price decline), and service-based purchases (which have increased in price).
+                                
+                                                                A combination of industrial offshoring, technological innovation and economies of scale have resulted in a price decline in goods such as televisions (-96% since 1997), software (-67%), toys (-69%), and clothing (-4%). In contrast, the prices of goods and services such as education, childcare, medical care, and housing have increased significantly, rising by 150%, 110%, 100% and 58%, respectively.
+                                                                
+                                                                The observed rise in costs of services may be partly attributed to the so-called ‘Baumol’s cost disease‘, which is an important exception from the general regularity that the pay for labor – the wage – reflects the productivity of labor. Baumol’s cost disease describes the phenomenon whereby wages rise in jobs which have experienced little improvements in labor productivity in order to compete with salaries in other sectors.
+                                                                
+                                                                Examples of service-based roles such as nursing, healthcare, childcare and education have experienced little productivity growth relative to manufacturing sectors which have seen continued improvements through technological innovation. In order to retain employees in service-based roles, salaries have risen in order to remain competitive with industrial sectors; this increase in pay has occurred despite minimal gains in productivity. This may in part explain why the cost of education, healthcare and other services have risen faster than the general rate of inflation.</p>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <h4 class="tituloGrafico">Price changes in consumer goods and services in the USA</h4>
+                            <p>Price change in consumer goods and services in the USA, measured as the percentage change since
+                                                                1997. Data is measured based on the reported consumer price index (CPI) for national average urban
+                                                                consumer prices.</p>
+                            <div id="plot6"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+            <section class="hero mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>
+                                Technology Investment in Mexico
+                            </h1>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+
+        <script src="../static/js/app.js"></script>
+    </body>
+
+
 </html>
