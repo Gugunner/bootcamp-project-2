@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/project-2-api/";
+const API_URL = "https://technological-progress-project.herokuapp.com/project-2-api/";
 const computingPath = API_URL + 'computing_efficiency.json';
 const microprocessorsPath = API_URL + 'microprocessor_clock_speed.json';
 const priceChangesPath = API_URL + 'price_changes_in_consumer_goods_and_services_in_the_usa_1997_2017.json';
