@@ -425,10 +425,10 @@ function creartabla(data) {
             fixedrange: true
         },
         yaxis2: {
-            // title: 'W per MIPS',
-            // titlefont: {color: 'rgb(148, 103, 189)'},
-            // tickfont: {color: 'rgb(148, 103, 189)'},
-            // overlaying: 'y',
+            title: 'W per MIPS',
+            titlefont: {color: 'rgb(148, 103, 189)'},
+            tickfont: {color: 'rgb(148, 103, 189)'},
+            overlaying: 'y',
             side: "right"
         },
     };
