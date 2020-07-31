@@ -17,3 +17,7 @@ Server/config.py
 App/__pycache__/Icon
 
 App/__pycache__/
+
+__pycache__/
+
+config.py
