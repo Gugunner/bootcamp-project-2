@@ -1,20 +1,20 @@
 body{
-    font-family: Georgia;
-    background-color: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
 }
 
 
 .info{
-    background-color: #f8c723;
     width: 100%;
     height: 40px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 2px;
 }
 
 .info a{
-padding-top: 50px;
-color: #002147;
+color: white;
 }
 
 .info2{
@@ -30,18 +30,40 @@ color: #002147;
     list-style: none;
 }
 
-.hero1 h1{
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2.0em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 0.8em;
+}
+
+h6 {
+    font-size: 0.4em;
+}
+
+.hero1 {
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 100px;
     font-weight: 300px;
 }
 
 
-.hero h1{
+.hero {
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 50px;
     font-weight: 200px;
 }
 
@@ -58,22 +80,79 @@ color: #002147;
     font-size: 10px;
 }
 
-.data{
-    padding-top: 50px;
-}
-
 .card-header{
     background-color: #ebeef2;
     
 }
 
-.card-header h2 button{
-    color: #1d3d63;
-    font-size: 2.5rem;
+.action {
+    background-color: #F77825;
+    text-decoration: none;
+    box-shadow: none !important;
 }
-.cuadro{
-    width: 90%;
-    margin: auto auto;
+
+.action:hover {
+    color: white !important;
+    text-decoration: white underline !important;
+    box-shadow: none !important;
+}
+
+.card-container {
+    padding: 20px;
+}
+
+.card-header button{
+    color: #1d3d63;
+    font-size: 0.6em;
+    color: white;
+}
+
+.plot-card {
+    height: 150px;
+    position: relative;
+}
+
+#computing-card {
+    background: url("https://www.sciencenews.org/wp-content/uploads/2020/03/032420_mt_computer-covid_feat-800x450.jpg");
+}
+
+#microprocessor-card {
+    background: url("https://www.scientific-computing.com/sites/default/files/content/feature/lead-image/SCWfeb20-pp07-shutterstock_13689876023x2_0.jpg");
+}
+
+#flightrecords-card {
+    background: url("https://blogs.3ds.com/simulia/wp-content/uploads/sites/18/2017/10/flight_blog.png");
+}
+
+#genomepairs-card {
+    background: url("https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-genetransfer.jpg");
+}
+
+#pricechanges-card {
+    background: url("https://www.ruleoneinvesting.com/wp-content/uploads/2014/11/stock-market-trends-what-causes-stock-prices-to-change.jpg");
+}
+
+#supercomputer-card {
+    background: url("https://cordis.europa.eu/docs/news/images/2019-10/410197.jpg");
+}
+
+.plot-card-mask {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #F77825;
+    opacity: 0.4;
+}
+
+.plot-card-mask:hover {
+    opacity: 0.1;
+}
+
+.image-footer {
+    color: white;
+    opacity: 0.8;
+    font-size: 0.4em;
 }
 
 /* Selectores Estilos */
@@ -128,4 +207,8 @@ color: #002147;
 /* Titulo Graficos */
 .tituloGrafico{
     text-decoration: underline;
+}
+
+.plot {
+    width: 100%;
 }
