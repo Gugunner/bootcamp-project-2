@@ -21,10 +21,10 @@ var ySmailagic = []
 
 var elementos = 0
 var nuevaData = []
-var nuevoArreglo = []
 
 d3.json(computingPath).then(data => {
     computingData = data.values
+
 
     computingData.forEach(el => {
 
@@ -351,12 +351,7 @@ d3.json(investmentMexicoPath).then(data => { // console.log("Investment by entit
 // --------- *** Grafica de Computing efficiency *** ------
 
 function creartabla(data) {
-
-    // var rawDataURL = 'https://raw.githubusercontent.com/plotly/datasets/master/2016-weather-data-seattle.csv';
-
     var xField = 'esdfsdfDate';
-    // var yField = 'sdfsdfsdfsdfMean_TemperatureC';
-
     var selectorOptions = {
         buttons: [ {
             step: 'year',
@@ -367,9 +362,6 @@ function creartabla(data) {
             step: 'all',
         }],
     };
-
-    // Plotly.d3.csv(rawDataURL, function(err, rawData) {
-    // if(err) throw err;
 
     var Intel = {
         x: xIntel,
@@ -393,13 +385,8 @@ function creartabla(data) {
         name: "Smailagic",
         type: 'lines'
     };
-
-
     var data1 = [Intel, Frantz, Smailagic];
-
     var layout = {
-        //title: 'Computing Efficiency, 1971 to 2015',
-        
         title: {
             text:'Computing Efficiency, 1971 to 2015',
             font: {
@@ -409,9 +396,6 @@ function creartabla(data) {
             xref: 'paper',
             x: 2,
           },
-        
-        
-        
         xaxis: { 
             rangeselector: selectorOptions,
             rangeslider: {},
@@ -435,33 +419,9 @@ function creartabla(data) {
 
     Plotly.newPlot('plot', data1, layout);
     Plotly.newPlot('plot2', data1, layout);
-    // });
-
-    // function prepData(rawData) {
-    //     var x = [];
-    //     var y = [];
-
-    //     rawData.forEach(function(datum, i) {
-
-    //         x.push(new Date(datum[xField]));
-    //         y.push(datum[yField]);
-    //     });
-
-    //     return [{
-    //         mode: 'lines',
-    //         x: x,
-    //         y: y
-    //     }];
-    // }
-
 }
 
-
-
-var primerLink = document.querySelector('#primerLink')
-primerLink.addEventListener('click', () => {
-    creartabla()
-})
+d3.select("#computing-card").on("click", () => creartabla());
 
 // --------- *** Microprocessor clock speed *** ------
 
@@ -476,7 +436,6 @@ function creartablaMicro(data) {
     var data1 = [Micro];
 
     var layout = {
-        //title: 'Microprocessor clock speed',
         title: {
             text:'Microprocessor clock speed',
             font: {
@@ -486,10 +445,6 @@ function creartablaMicro(data) {
             xref: 'paper',
             x: 2,
           },
-
-
-
-
         xaxis: {
 
             rangeslider: {}
@@ -501,13 +456,7 @@ function creartablaMicro(data) {
     Plotly.newPlot('plot', data1, layout);
     Plotly.newPlot('plot3', data1, layout);
 }
-
-
-var microLink = document.querySelector('#microLink')
-microLink.addEventListener('click', () => {
-    creartablaMicro()
-})
-
+d3.select("#microprocessor-card").on("click", () => creartablaMicro());
 
 // --------- *** Non-commercial flight distance records*** ------
 
@@ -518,11 +467,8 @@ function creartablaNonComer(data) {
         y: ySuperComputer,
         type: 'scatter'
     };
-
     var data1 = [Micro];
-
     var layout = {
-        //title: 'Microprocessor clock speed',
          title: {
             text:'Non-commercial flight distance records, 1800 to 2006',
             font: {
@@ -532,9 +478,6 @@ function creartablaNonComer(data) {
             xref: 'paper',
             x: 2,
           },
-
-
-
         xaxis: {
 
             rangeslider: {}
@@ -546,12 +489,7 @@ function creartablaNonComer(data) {
     Plotly.newPlot('plot', data1, layout);
     Plotly.newPlot('plot4', data1, layout);
 }
-
-
-
-var nonCommercialLink = document.querySelector('#nonCommercialLink')
-nonCommercialLink.addEventListener('click', () => { creartablaNonComer()
-})
+d3.select("#flightrecords-card").on("click", () => creartablaNonComer());
 
 // --------- *** Number of human genome base pairs sequenced per US$*** ------
 function creartablaHuman(data) {
@@ -561,12 +499,8 @@ function creartablaHuman(data) {
         y: yGenome,
         type: 'scatter'
     };
-
     var data1 = [human];
-
     var layout = {
-        //title: 'Number of human genome base pairs sequenced per US$',
-
         title: {
             text:'Number of human genome base pairs sequenced per US$',
             font: {
@@ -576,10 +510,6 @@ function creartablaHuman(data) {
             xref: 'paper',
             x: 2,
           },
-
-
-
-
         xaxis: {
 
             rangeslider: {}
@@ -591,121 +521,96 @@ function creartablaHuman(data) {
     Plotly.newPlot('plot', data1, layout);
     Plotly.newPlot('plot5', data1, layout);
 }
-
-
-var numberHumanLink = document.querySelector('#numberHumanLink')
-numberHumanLink.addEventListener('click', () => { creartablaHuman()
-})
-
+d3.select("#genomepairs-card").on("click", () => creartablaHuman());
 
 // --------- *** Price changes in consumer goods and services in the USA*** ------
 function creartablaPrice(data) {
-
     var pcChildcareH = {
         x: priceChangeYears,
         y: pcChildcare,
         name: "childcare",
         type: 'lines'
     };
-
     var pcClothingH = {
         x: priceChangeYears,
         y: pcClothing,
         name: "clothing",
         type: 'lines'
     };
-
     var pcCollegeTuitionFeesH = {
         x: priceChangeYears,
         y: pcCollegeTuitionFees,
         name: "College Tuition Fees",
         type: 'lines'
     };
-
     var pcEducationH = {
         x: priceChangeYears,
         y: pcEducation,
         name: "Education",
         type: 'lines'
     };
-
     var pcFoodH = {
         x: priceChangeYears,
         y: pcFood,
         name: "Food and Beverages",
         type: 'lines'
     };
-
     var pcHouseholdEnergyH = {
         x: priceChangeYears,
         y: pcHouseholdEnergy,
         name: "Energy",
         type: 'lines'
     };
-
     var pcHousingH = {
         x: priceChangeYears,
         y: pcHousing,
         name: "Housing",
         type: 'lines'
     };
-
     var pcMedicalH = {
         x: priceChangeYears,
         y: pcMedical,
         name: "Medical Care",
         type: 'lines'
     };
-
     var pcNewCardsH = {
         x: priceChangeYears,
         y: pcNewCards,
         name: "New Cars",
         type: 'lines'
     };
-
     var pcPublicTransportH = {
         x: priceChangeYears,
         y: pcPublicTransport,
         name: "Public Transportation",
         type: 'lines'
     };
-
     var pcSoftwareH = {
         x: priceChangeYears,
         y: pcSoftware,
         name: "Software",
         type: 'lines'
     };
-
     var pcToysH = {
         x: priceChangeYears,
         y: pcToys,
         name: "Toys",
         type: 'lines'
     };
-
     var pcTVsH = {
         x: priceChangeYears,
         y: pcTVs,
         name: "Toys",
         type: 'lines'
     };
-
     var pcMedialH = {
         x: priceChangeYears,
         y: pcMedial,
         name: "TVs",
         type: 'lines'
     };
-
-
-
-
     var data1 = [pcChildcareH, pcClothingH,pcCollegeTuitionFeesH,  pcEducationH,pcFoodH, pcHouseholdEnergyH,pcHousingH,pcMedicalH,pcNewCardsH,pcPublicTransportH,pcPublicTransportH, pcSoftwareH,pcToysH, pcTVsH,pcMedialH];
-
     var layout = {
-        //title: 'Price changes in consumer goods and services in the USA',
         title: {
             text:'Price changes in consumer goods and services in the USA',
             font: {
@@ -726,11 +631,7 @@ function creartablaPrice(data) {
     Plotly.newPlot('plot', data1, layout);
     Plotly.newPlot('plot6', data1, layout);
 }
-var priceLink = document.querySelector('#priceLink')
-priceLink.addEventListener('click', () => { creartablaPrice()
-})
-
-
+d3.select("#pricechanges-card").on("click", () => creartablaPrice());
 
 // --------- *** Supercomputer Power (FLOPS)*** ------
 function creartablaFLOPS(data) {
@@ -740,12 +641,8 @@ function creartablaFLOPS(data) {
         y: ySuperComputer,
         type: 'scatter'
     };
-
     var data1 = [human];
-
     var layout = {
-        //title: 'Number of human genome base pairs sequenced per US$',
-        
         title: {
             text:'Supercomputer Power (FLOPS), 1993 to 2017',
             font: {
@@ -755,10 +652,6 @@ function creartablaFLOPS(data) {
             xref: 'paper',
             x: 2,
           },
-
-
-        
-        
         xaxis: {
 
             rangeslider: {}
@@ -771,10 +664,7 @@ function creartablaFLOPS(data) {
     Plotly.newPlot('plot75', data1, layout);
 }
 creartablaFLOPS()
-var supercomputerLink = document.querySelector('#supercomputerLink')
-supercomputerLink.addEventListener('click', () => { creartablaFLOPS()
-})
-
+d3.select("#supercomputer-card").on("click", () => creartablaFLOPS());
 
 
 
