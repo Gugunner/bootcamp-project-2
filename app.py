@@ -6,7 +6,7 @@ import sys
 import create_data
 # import config
 
-conn = f"mongodb+srv://Raul:bootcamp1234@cluster0.uatil.mongodb.net/Project_2?retryWrites=true&w=majority"
+conn = f"mongodb+srv://{Username}:{Password}@cluster0.uatil.mongodb.net/Project_2?retryWrites=true&w=majority"
 client = pymongo.MongoClient(conn)
 
 db = client.Project_2
